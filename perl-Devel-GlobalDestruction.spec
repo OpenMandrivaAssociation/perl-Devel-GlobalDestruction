@@ -1,19 +1,20 @@
-%define module   Devel-GlobalDestruction
-%define version    0.02
-%define release    %mkrel 1
+%define upstream_name    Devel-GlobalDestruction
+%define upstream_version 0.02
 
-Name:       perl-%{module}
-Version:    %{version}
-Release:    %{release}
-License:    GPL or Artistic
-Group:      Development/Perl
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:    Expose PL_dirty, the flag which marks global
-Url:        http://search.cpan.org/dist/%{module}
-Source:     http://www.cpan.org/modules/by-module/Devel/%{module}-%{version}.tar.gz
-BuildRequires: perl-devel
+License:    GPL+ or Artistic
+Group:      Development/Perl
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/Devel/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires: perl(Scope::Guard)
 BuildRequires: perl(Sub::Exporter)
-BuildRoot:  %{_tmppath}/%{name}-%{version}
+BuildRequires: perl-devel
+BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Perl's global destruction is a little tricky to deal with WRT finalizers
@@ -27,7 +28,7 @@ For these constructors you can avoid the mess by simply bailing out if
 global destruction is in effect.
 
 %prep
-%setup -q -n %{module}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -47,5 +48,3 @@ rm -rf %buildroot
 %defattr(-,root,root)
 %{_mandir}/man3/*
 %perl_vendorlib/*
-
-
