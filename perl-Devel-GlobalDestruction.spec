@@ -1,9 +1,9 @@
 %define upstream_name    Devel-GlobalDestruction
-%define upstream_version 0.03
+%define upstream_version 0.04
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    %mkrel 1
 
 Summary:    Expose PL_dirty, the flag which marks global
 License:    GPL+ or Artistic
