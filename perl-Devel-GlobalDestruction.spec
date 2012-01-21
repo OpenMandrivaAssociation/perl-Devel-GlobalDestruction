@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Release:    %mkrel 2
 
 Summary:    Expose PL_dirty, the flag which marks global
 License:    GPL+ or Artistic
