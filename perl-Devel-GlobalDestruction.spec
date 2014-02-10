@@ -11,6 +11,7 @@ Url:		http://search.cpan.org/dist/%{modname}
 Source0:	http://www.cpan.org/modules/by-module/Devel/Devel-GlobalDestruction-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(Scope::Guard)
+BuildRequires: perl(Sub::Exporter::Progressive)
 BuildRequires:	perl(Sub::Exporter)
 BuildRequires:	perl-devel
 
