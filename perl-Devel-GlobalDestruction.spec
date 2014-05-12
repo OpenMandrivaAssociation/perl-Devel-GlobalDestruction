@@ -2,13 +2,14 @@
 %define modver 0.12
 
 Summary:	Expose PL_dirty, the flag which marks global
+
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
 Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/Devel/Devel-GlobalDestruction-%{modver}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Devel/%{modname}-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(Scope::Guard)
 BuildRequires: perl(Sub::Exporter::Progressive)
@@ -42,5 +43,6 @@ make test
 %files
 %{perl_vendorlib}/*
 %{_mandir}/man3/*
+
 
 
