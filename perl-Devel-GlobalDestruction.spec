@@ -1,10 +1,10 @@
 %define modname	Devel-GlobalDestruction
-%define modver 0.12
+%define modver 0.14
 
 Summary:	Expose PL_dirty, the flag which marks global
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	6
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
