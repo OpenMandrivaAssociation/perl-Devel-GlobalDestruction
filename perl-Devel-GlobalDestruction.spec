@@ -4,10 +4,10 @@
 Summary:	Expose PL_dirty, the flag which marks global
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	3
+Release:	4
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{modname}
+Url:		http://metacpan.org/pod/Devel::GlobalDestruction
 Source0:	http://www.cpan.org/modules/by-module/Devel/Devel-GlobalDestruction-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(Scope::Guard)
