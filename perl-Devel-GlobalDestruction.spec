@@ -4,7 +4,7 @@
 Summary:	Expose PL_dirty, the flag which marks global
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	4
+Release:	5
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://metacpan.org/pod/Devel::GlobalDestruction
@@ -26,7 +26,7 @@ For these constructors you can avoid the mess by simply bailing out if
 global destruction is in effect.
 
 %prep
-%setup -qn %{modname}-%{modver}
+%autosetup -p1 -n %{modname}-%{modver}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
