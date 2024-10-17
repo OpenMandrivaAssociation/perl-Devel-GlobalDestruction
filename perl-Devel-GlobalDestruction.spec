@@ -7,7 +7,7 @@ Version:	%perl_convert_version %{modver}
 Release:	8
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		http://metacpan.org/pod/Devel::GlobalDestruction
+Url:		https://metacpan.org/pod/Devel::GlobalDestruction
 Source0:	http://www.cpan.org/modules/by-module/Devel/Devel-GlobalDestruction-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(Scope::Guard)
