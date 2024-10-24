@@ -1,14 +1,13 @@
 %define modname	Devel-GlobalDestruction
-%define modver 0.14
 
 Summary:	Expose PL_dirty, the flag which marks global
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
-Release:	9
+Version:	0.14
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/pod/Devel::GlobalDestruction
-Source0:	http://www.cpan.org/modules/by-module/Devel/Devel-GlobalDestruction-%{modver}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Devel/Devel-GlobalDestruction-%{version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(Scope::Guard)
 BuildRequires:	perl(Sub::Exporter)
@@ -26,17 +25,17 @@ For these constructors you can avoid the mess by simply bailing out if
 global destruction is in effect.
 
 %prep
-%autosetup -p1 -n %{modname}-%{modver}
+%autosetup -p1 -n %{modname}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
-%make
+%make_build
 
 #%check
 #make test
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %{perl_vendorlib}/*
